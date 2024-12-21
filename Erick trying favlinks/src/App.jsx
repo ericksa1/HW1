@@ -13,7 +13,7 @@ function App(){
 
 return (
   <div>
-  <h1 className="testClass">Submit your fav links ! </h1>
+  <h1 className="testClass">Submit your favorite links !!!! </h1>
 
 
 <Form />

@@ -14,22 +14,26 @@ function Form()
   //  }
 
   const [name , setName] = useState("")
-
+const [URL, setURL] = useState("")
 
 
   let handleSubmit = (event) =>{
     event.preventDefault()
     alert('submitted from arrow fucntion!')
-    console.log(name)
+    console.log(name, URL)
 }
 
 
 let handleNameChange = (event) =>{
-    console.log(event.target.value)
+    //console.log(event.target.value)
     setName(event.target.value)
 }
     
+let handleURLChange = (event) =>{
 
+setURL(event.target.value)
+
+}
 
 return(
 <form onSubmit={handleSubmit}>
@@ -38,9 +42,9 @@ return(
     <br/>
 
     <label for="linkURL">Link URL</label>
-    <input type="text" name="linkURL"/>
+    <input type="text" name="linkURL" onChange={handleURLChange}/>
 
-    <br/>
+    <br/> 
     <br/>
 
 

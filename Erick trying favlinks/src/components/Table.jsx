@@ -1,9 +1,16 @@
-function Table(){
+function Table(props){
 
 
     //To do
     //this is the custom TABLE component
- 
+ let rows = props.links.map((data) =>{
+return(
+    <tr>
+        <td>{data.name}</td>
+        <td>{data.URL}</td>
+    </tr>
+)
+ })
     return(
 
         <table>
@@ -15,12 +22,7 @@ function Table(){
         </thead>
 
         <tbody>
-            <tr>
-
-              <td> Erick Testing</td> 
-              <td>Test.com</td>
-              
-            </tr>
+              {rows}
         </tbody>
         
            

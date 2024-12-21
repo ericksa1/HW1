@@ -8,18 +8,29 @@ import './App.css'
 
 import Form from './component/Form'
 import Table from './component/Table'
+import { useState } from 'react'
+
+
 function App(){
 //all components have to return some JSX and that it
+
+
+let handleNewSubmission = (data) =>{
+
+  setFavLinks([...favLinks, data])
+}
+
+
 
 return (
   <div>
   <h1 className="testClass">Submit your favorite links !!!! </h1>
 
 
-<Form />
+<Form onNewSubmit={handleNewSubmission}/>
 
 
-<Table />
+<Table links={favLinks} />
 
 
   </div>

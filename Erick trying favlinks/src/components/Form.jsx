@@ -5,7 +5,7 @@ function Form()
 {
 
      //To do
-    //this is the custom TABLE component
+    //this is the custom form component
 
 
 //    function handleSubmit(event){
@@ -19,8 +19,15 @@ const [URL, setURL] = useState("")
 
   let handleSubmit = (event) =>{
     event.preventDefault()
-    alert('submitted from arrow fucntion!')
-    console.log(name, URL)
+    //alert('submitted from arrow fucntion!')
+
+    if(name === "" || URL ===""){
+        alert('Name and URL are required')
+
+    }else{
+        console.log(name, URL)
+    }
+    
 }
 
 
@@ -48,7 +55,7 @@ return(
     <br/>
 
 
-    <input type="submit" />
+    <input type="submit" disabled = {name === "" || URL===""}/>
 
 
 </form>
